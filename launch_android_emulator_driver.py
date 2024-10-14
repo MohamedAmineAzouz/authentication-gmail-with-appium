@@ -6,7 +6,7 @@ from appium.options.common import AppiumOptions
 
 
 
-def launch_android_emulator_driver():
+async def launch_android_emulator_driver():
     try:
         cap:Dict[str ,Any]={
             'platformName': 'Android' ,

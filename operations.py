@@ -10,7 +10,7 @@ class Operations():
 
 
 
-    def add_proxy( self ):
+    async def add_proxy( self ):
         proxy_ip = "111.111.111.111"
         proxy_port = "8080"
         command =  f"""
@@ -34,7 +34,7 @@ class Operations():
             return False
         
 
-    def reset_google_apps ( self ):
+    async def reset_google_apps ( self ):
         try:
             res =  self.driver.execute_script('mobile: shell',{
                 "command": "pm  list packages | grep com.google | sed 's/package://' | while read i; do pm clear $i ; done",
